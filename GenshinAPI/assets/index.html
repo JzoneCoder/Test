@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Teyvat</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./styles/shared/shared.css">
+  <link rel="stylesheet" href="./styles/shared/general.css">
+  <link rel="stylesheet" href="./styles/shared/loading.css">
+  <link rel="stylesheet" href="./styles/main/left.css">
+  <link rel="stylesheet" href="./styles/main/middle.css">
+  <link rel="stylesheet" href="./styles/main/right.css">
+  <link rel="stylesheet" href="./styles/main/characters.css">
+  <link rel="stylesheet" href="./styles/main/nations.css">
+  <link rel="stylesheet" href="./styles/main/footer.css">
+  <link rel="stylesheet" href="./styles/shared/animate.css">
+
+  <!-- Animate script -->
+  <script defer src="./scripts/animate.js"></script>
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/icons/genshin-icon.svg" type="image/x-icon">
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div class="loading-screen">
+    <img src="./assets/loading/loading-screen.gif" alt="Loading...">
+  </div>
+
+  <!-- Landing page -->
+  <div class="hero">
+    <!-- Landing page left portion -->
+    <div class="left-container hidden">
+      <div class="search-section">
+        <button class="search-button button-primary js-search-button">
+          <img class="search-icon" src="./assets/icons/search-icon.png" alt="Search Icon">
+        </button>
+        <input class="search-bar js-search-bar" type="text" placeholder="Search a character">
+      </div>
+
+      <div class="top-characters-section">
+        <div class="gallery-header">
+          <img class="star-icon" src="./assets/icons/star-icon.png" alt="Star Icon">
+          <h4 class="heading">Top Characters</h4>
+        </div>
+
+        <div class="top-characters-gallery">
+          <div class="gallery">
+            <img src="./assets/characters/Yelan.jpg" alt="Yelan" class="gallery-image">
+          </div>
+
+          <div class="gallery">
+            <img src="./assets/characters/Keqing.jpg" alt="Keqing" class="gallery-image">
+          </div>
+
+          <div class="gallery">
+            <img src="./assets/characters/Diluc.jpg" alt="Diluc" class="gallery-image">
+          </div>
+        </div>
+
+        <div class="bottom-line">
+          <div class="mock-line">
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Landing page middle portion -->
+    <div class="middle-container hidden">
+      <div class="card">
+        <div class="card-image">
+          <div class="intro-container">
+            <h1>Genshin Impact</h1>
+            <p>
+              Set forth on a journey across a world called Teyvat. As 
+              a traveler from another world, you will embark on a journey to 
+              reunite with your long-lost sibling and unravel the mysteries of 
+              Teyvat, and yourself.
+            </p>
+            <button class="see-button button-primary">
+              <a href="https://genshin.hoyoverse.com/en/" target="_blank" class="see-link">
+                See latest updates
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div class="video-section">
+          <video id="genshin-video" autoplay loop muted>
+            <source src="./videos/genshin-intro.mp4" type="video/mp4">
+            <source src="./videos/genshin-intro.webm" type="video/webm">
+          </video>
+          <button class="mute-button">
+            <img src="./assets/icons/mute-icon.png" alt="Mute Icon" class="mute-icon">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Landing page right portion -->
+    <div class="right-container">
+      <nav class="navbar">
+        <div class="audio-controller">
+          <button class="audio-button button-primary">
+            <img class="play-icon" src="./assets/icons/play-icon.png" alt="Play Icon">
+          </button>
+          <audio class="genshin-ost" src="./audios/genshin-ost.mp3" loop></audio>
+        </div>
+    
+        <!-- Navigation Links -->
+        <ul class="navbar-content">
+          <li class="nav-item">
+            <a href="#" class="nav-link anchor-primary">
+              <img class="nav-icon" src="./assets/icons/home-icon.png" alt="Home Icon">
+            </a>
+          </li>
+          
+          <li class="nav-item">
+            <a href="#main" class="nav-link anchor-primary">
+              <img class="nav-icon" src="./assets/icons/character-icon.png" alt="Characters Icon">
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="#nations" class="nav-link anchor-primary">
+              <img class="nav-icon" src="./assets/icons/nation-icon.png" alt="Nation Icon">
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link anchor-primary js-scroll-anchor">
+              <img class="nav-icon" src="./assets/icons/search-icon.png" alt="Search Icon">
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="https://genshin.hoyoverse.com/en/home" target="_blank" class="nav-link anchor-primary">
+              <img class="nav-icon" src="./assets/icons/genshin-icon.svg" alt="Genshin Icon">
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- End of landing page -->
+
+  <!-- Start of characters content -->
+  <div class="main" id="main">
+    <div class="heading-container">
+      <h1 class="characters-heading">Characters</h1>
+      <h4>The characters of Teyvat</h4>
+      <img src="./assets/icons/characters-icon.png" alt="Characters Icon" class="characters-icon">
+    </div>
+    <div class="characters-grid">
+    </div>
+    <div class="message-container">
+    </div>
+  </div>
+  <!-- End of characters content -->
+
+  <!-- Start of nation content -->
+  <div class="nations hidden" id="nations">
+  </div>
+  <!-- Start of nation content -->
+
+  <!-- Nation Audios -->
+  <audio class="nation-ost mondstadt-ost" src="./audios/mondstadt-ost.mp3" preload="auto" loop></audio>
+  <audio class="nation-ost liyue-ost" src="./audios/liyue-ost.mp3" preload="auto" loop></audio>
+  <audio class="nation-ost inazuma-ost" src="./audios/inazuma-ost.mp3" preload="auto" loop></audio>
+  <audio class="nation-ost sumeru-ost" src="./audios/sumeru-ost.mp3" preload="auto" loop></audio>
+  <audio class="nation-ost fontaine-ost" src="./audios/fontaine-ost.mp3" preload="auto" loop></audio>
+
+  <!-- Start of footer section -->
+  <div class="footer hidden">
+    <!-- Social Icons -->
+    <div class="social">
+      <a href="https://github.com/JzoneCoder" target="_blank">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAfhJREFUOE+11UmoTnEYx/HPjTKUIYmMC0MsLSyUKclCSlaKBVGGm5CdWN2FrExlcUnCQslCUlbKEGXISpEyy5CSKZT5PHpOHefe+75n49m87zn/3/P9/5/pfzr8B+toyByGafiIh/jeyq8VdDy2YBmmViA/cAWncBTx/I/1Bd2JLvRrE8kTLMHdqq436G5sb5iWkH3AXNwpferQTTiYi3uwAmP72OAiPmEp3mAGXoW2Ch2HBxiIR5iM/lib0KcYggm4iWuYj0u5fgKr69C9RSjbUvAOIxqkIIp4JnW/c8MX1ZO+xJgUnM2qt+NGau5haAo70V1ChyNOV1ok/mo7Yq4fxrr8fwxrSuikbOqSMxHPG0J3YFdqI78LSmiEHeGXNgs3GkK7i6pvSO2FooCLSmg0eYzg4FyMttrcABq5jLEdmdrYoLNaqChO9FzYTywsQrncAjyg6OHI56qKJvzPVaGLcR7Rb1G4EJzE7RyIb+k8HQcQv5H70h5jCn7VJypONg8z03F2NvmcinNcNL0VcTlOh64OjZ1vZdgrEdD7eF1Lw9ecvPL1oUKzsXzo7UKJsOLEz3A9R3ZfDfoFg/LdkaJz1iMm6q/1dfWNLvK6v7jSIqTohK016Ge8R/To8Xox2938o7IT3tYc4ysQl090SQ9rB23Qqj0lfwASh1wWgl1aiwAAAABJRU5ErkJggg==" alt="GitHub Icon"/>
+      </a>
+      <a href="#" target="_blank">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAftJREFUOE+11MurTmEUx/HPya0wcckld7nlUlKuYWKIEjNEzBhIkSiXchkIieQyIemcQigm/gHCAGXC6Ui5Z8CMRHhWPa/2u9tnO71l1x7s51nP91nrt357tfkPT1sFsxdm4gte19zZB7PwFp+KcWXoDNzBhBx0E+vxrQRfjOsYkdcvJPBW/IrvIrQfnmM8TmIKluMEdhagQ9JFXRiY3uNYhKU5JmKboPPwEOfyrSFDlB+3jylAV+EW9uEw+mepnmBBGTofD9CeS47M3+Nnumh4Abo6aXkDx7ALQ/EBzzCnDO2NlxiL+xiGSTiIAwXoALzASNzDuHxmN46WofE9OZe/LIF+4xR2NBpQAE9HNHFqyvZrliEyj6qaNC02+F1uRGQTh6qeLamaswVt/8ZU+TQ2I8NtyTLnsR3fS9SJeITBmIbOOp829gbhcbZXGHt/0u0iRudS1+bAWD9ULqO7TCMuuhoHNqMvQpJwQTT0Vcp+D65W6VIHbcSH2eOPWZNl2IhruZGVYvcEGgdnI8wdFlpSB6zrfjGDTakhp7MbYj0aFFnHIGkp09DwTXLCZwR8YbbQFWxoFboy/Xq3k6n34kiGfMSP0jxo4v9L08aQuYsV2ZNPEe/cVjONS2NylQHr0mjsaBUa5+JHOINRGXIpDfHL3QF72v2685V7fwBzO1oWOelTtQAAAABJRU5ErkJggg==" alt="GitHub Repo Icon"/>
+      </a>
+      <a href="https://genshin.hoyoverse.com/en/" target="_blank">
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAVCAYAAACpF6WWAAAAAXNSR0IArs4c6QAAAmdJREFUOE+11F3Iz2ccx/EXhTw15SE1tmVkplnSbEzcyYnnHGhlFkVDKImkpRYlkZzo3ozlaZYDR5Mc2FrbCs0cWIs1MbHItBU1D7G4vvr+9PPvvm93yu/k//9dv+t6X9+Hz+fbwQt4OrST2RuDcAsXcb+tc21BX8EKzMJrNUgAf8TBsr4HDxovaA26vkTzCTrWDnyOERhbW/sTU3GuDm4J2owl+A/fYia+L9FNRF/8gW44kln8W75PwG8VuBG6BpvwOyZha4niA4wuEZ3KQ5HFugKfgzi/H9cwqgRzPfbUoUMSFh/ezlr9jdN4r5bey/gLx/F+AS5ClGYf5jVCd2EB5mNvgU3HN4joNzc040Re9FIq4udSjncQzb1SRRq/N9C9pNwzo1xV3rdkGb5rgFZ1fxcB/Bg7CmMpmivoQFzGTxifgJ0lzYV4s7G7KbVtmW6kHao4U5Wggr6FX9tphLa2/YCmCvpqqeUl/FOTxrCSSr9M704DqT+G4nxJ/So6YwyOlv1TKmgX3M5NbyQg5LQyOxydrj9rC2hjajia2ZRajlovrUvqWDbl9fT3YnxWq1sd+lUJ4EMMxoVUx2rMKHo9XId+lIX+Og9Ut3+RWqxDI+Ve6JEuC7vezBlxrw4Nn/+CkWnTL9MhdxHq+D+p41Ilu7EMIbcwx1wcaBR/vMc0Ct2Fx6NmIe7Q3mwcSujhcvm0hCwvzQmtbi9Njv+Pn5YGSnQ9pBHg6HrXtOVwTM6R9zAN0inEnhHHWqvQ+DAAG7JJrY3HkOCnaemnpPGsyd8nZRN1jskfzTibI/EknkRXpz4L+lwmewSDjn4WLIyz1QAAAABJRU5ErkJggg==" alt="Genshin Web"/>
+      </a>
+    </div>
+
+    <!-- Shortcuts -->
+    <ul>
+      <li>
+        <a href="#">Home</a>
+      </li>
+      <li>
+        <a href="#main">Characters</a>
+      </li>
+      <li>
+        <a class="js-scroll-anchor">Search</a>
+      </li>
+    </ul>
+
+    <!-- Copyright -->
+    <p class="copyright">
+      Acelle Rosales @ 2024
+    </p>
+  </div>
+  <!-- End of footer section -->
+
+  <script type="module" src="./scripts/main.js"></script>
+</body>
+</html>
