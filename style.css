@@ -282,19 +282,19 @@ header .menu li a:hover {
     }
 }
 
-@media screen and (max-width: 678px) {
+@media screen and (max-width: 768px) {
     .thumbnail {
         justify-content: start;
     }
     .slider .list .item .content h2 {
-        font-size: 60px;
+        font-size: 40px;
     }
     .arrows {
         top: 10%;
     }
 }
 
-@media screen and (min-width: 414px) and (max-width: 768px) {
+@media screen and (min-width: 300px) and (max-width: 768px) {
     .slider .list .item .content {
         margin-top: 70px; 
     }
